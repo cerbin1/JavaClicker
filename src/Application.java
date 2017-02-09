@@ -1,5 +1,6 @@
 import javax.swing.*;
 
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -9,6 +10,9 @@ public class Application {
 
     private void displayBoard() {
         JFrame frame = new JFrame("Clicker");
+        JLabel text = new JLabel("Label", SwingConstants.CENTER);
+        text.setText("0");
+        text.setFont(new Font("Arial", Font.BOLD, 40));
 
         JButton button = new JButton();
         button.setText("Click me!");
@@ -17,10 +21,16 @@ public class Application {
             public void mouseClicked(MouseEvent e) {
                 if (e.getButton() == 1) {
                     System.out.println("Du");
+                    text.setText(Integer.toString(Integer.parseInt(text.getText()) + 1));
                 }
             }
         });
-        frame.add(button);
+
+        JPanel panel = new JPanel(new GridLayout(2, 1));
+
+        panel.add(button);
+        panel.add(text);
+        frame.add(panel);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setSize(400, 400);
