@@ -22,7 +22,6 @@ public class Application {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getButton() == 1) {
-                    System.out.println("Du");
                     text.setText(Integer.toString(Integer.parseInt(text.getText()) + 1));
                 }
             }
