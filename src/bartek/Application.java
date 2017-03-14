@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import static javax.swing.SwingUtilities.invokeLater;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Application {
@@ -40,6 +41,6 @@ public class Application {
 
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Application().displayBoard());
+        invokeLater(() -> new Application().displayBoard());
     }
 }
