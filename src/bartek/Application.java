@@ -12,9 +12,10 @@ public class Application {
 
     private void displayBoard() {
         JFrame frame = new JFrame("Clicker");
-        Label label = new Label("Label", SwingConstants.CENTER);
-        label.setText("0");
-        label.setFont(new Font("Arial", Font.BOLD, 40));
+        Label label1 = new Label("Label", SwingConstants.CENTER);
+        Label label2 = new Label("Label", SwingConstants.CENTER);
+        label1.setText("0");
+        label1.setFont(new Font("Arial", Font.BOLD, 40));
 
         JButton button1 = new JButton();
         JButton button2 = new JButton();
@@ -24,19 +25,22 @@ public class Application {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getButton() == 1) {
-                    label.incrementCounter(1);
+                    label1.incrementCounter(1);
                 }
             }
         });
-
+Container pane = frame.getContentPane();
         JPanel panel = new JPanel(new BorderLayout());
 
-        panel.add(label, BorderLayout.PAGE_START);
-        panel.add(button1, BorderLayout.CENTER);
+        pane.add(label1, BorderLayout.PAGE_START);
+        pane.add(button1, BorderLayout.LINE_START);
+        pane.add(button2, BorderLayout.CENTER);
+        pane.add(button3, BorderLayout.LINE_END);
+        panel.add(label2, BorderLayout.PAGE_END);
         frame.add(panel);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        frame.setSize(400, 400);
+        frame.setSize(1000, 1000);
         frame.setVisible(true);
     }
 
