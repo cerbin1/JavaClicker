@@ -12,7 +12,7 @@ public class Application {
 
     private void displayBoard() {
         JFrame frame = new JFrame("Clicker");
-        JLabel text = new JLabel("Label", SwingConstants.CENTER);
+        Label text = new Label("Label", SwingConstants.CENTER);
         text.setText("0");
         text.setFont(new Font("Arial", Font.BOLD, 40));
 
@@ -22,7 +22,7 @@ public class Application {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getButton() == 1) {
-                    text.setText(Integer.toString(Integer.parseInt(text.getText()) + 1));
+                    text.incrementCounter(1);
                 }
             }
         });
