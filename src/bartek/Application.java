@@ -1,3 +1,5 @@
+package bartek;
+
 import javax.swing.*;
 
 import java.awt.*;
