@@ -12,9 +12,9 @@ public class Application {
 
     private void displayBoard() {
         JFrame frame = new JFrame("Clicker");
-        Label text = new Label("Label", SwingConstants.CENTER);
-        text.setText("0");
-        text.setFont(new Font("Arial", Font.BOLD, 40));
+        Label label = new Label("Label", SwingConstants.CENTER);
+        label.setText("0");
+        label.setFont(new Font("Arial", Font.BOLD, 40));
 
         JButton button = new JButton();
         button.setText("Click me!");
@@ -22,7 +22,7 @@ public class Application {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getButton() == 1) {
-                    text.incrementCounter(1);
+                    label.incrementCounter(1);
                 }
             }
         });
@@ -30,7 +30,7 @@ public class Application {
         JPanel panel = new JPanel(new GridLayout(2, 1));
 
         panel.add(button);
-        panel.add(text);
+        panel.add(label);
         frame.add(panel);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
