@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import static javax.swing.SwingConstants.*;
 import static javax.swing.SwingUtilities.invokeLater;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
@@ -13,7 +14,7 @@ public class Application {
 
     private void displayBoard() {
         JFrame frame = new JFrame("Clicker");
-        Label label = new Label("Label", SwingConstants.CENTER);
+        Label label = new Label("Label", CENTER);
         label.setText("0");
         label.setFont(new Font("Arial", Font.BOLD, 40));
 
