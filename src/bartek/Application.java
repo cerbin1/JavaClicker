@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import static java.awt.BorderLayout.*;
 import static javax.swing.SwingUtilities.invokeLater;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
@@ -32,11 +33,11 @@ public class Application {
 Container pane = frame.getContentPane();
         JPanel panel = new JPanel(new BorderLayout());
 
-        pane.add(label1, BorderLayout.PAGE_START);
-        pane.add(button1, BorderLayout.LINE_START);
-        pane.add(button2, BorderLayout.CENTER);
-        pane.add(button3, BorderLayout.LINE_END);
-        panel.add(label2, BorderLayout.PAGE_END);
+        pane.add(label1, PAGE_START);
+        pane.add(button1, LINE_START);
+        pane.add(button2, CENTER);
+        pane.add(button3, LINE_END);
+        panel.add(label2, PAGE_END);
         frame.add(panel);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
