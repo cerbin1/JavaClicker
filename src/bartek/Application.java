@@ -30,7 +30,7 @@ public class Application {
                 }
             }
         });
-Container pane = frame.getContentPane();
+        Container pane = frame.getContentPane();
         JPanel panel = new JPanel(new BorderLayout());
 
         pane.add(label1, PAGE_START);
