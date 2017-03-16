@@ -9,12 +9,14 @@ import static java.awt.BorderLayout.*;
 import static javax.swing.SwingUtilities.invokeLater;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
+import static javax.swing.SwingConstants.CENTER;
+
 public class Application {
 
     private void displayBoard() {
         JFrame frame = new JFrame("Clicker");
-        Label label1 = new Label("Label", SwingConstants.CENTER);
-        Label label2 = new Label("Label", SwingConstants.CENTER);
+        Label label1 = new Label("Label", CENTER);
+        Label label2 = new Label("Label", CENTER);
         label1.setText("0");
         label1.setFont(new Font("Arial", Font.BOLD, 40));
 
@@ -35,13 +37,14 @@ public class Application {
 
         pane.add(label1, PAGE_START);
         pane.add(button1, LINE_START);
-        pane.add(button2, CENTER);
+        pane.add(button2, PAGE_START);
         pane.add(button3, LINE_END);
         panel.add(label2, PAGE_END);
         frame.add(panel);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setSize(1000, 1000);
+        frame.pack();
         frame.setVisible(true);
     }
 
